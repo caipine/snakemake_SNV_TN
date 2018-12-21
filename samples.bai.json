@@ -1,0 +1,58 @@
+{
+    "BCC1": {
+        "control": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC1-control-lane1.bai"
+        ],
+        "tumor": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC1-tumor-lane2.bai"
+        ]
+    },
+    "BCC10": {
+        "control": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC10-control-lane11.bai"
+        ],
+        "tumor": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC10-tumor-lane12.bai"
+        ]
+    },
+    "BCC11": {
+        "control": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC11-control-lane13.bai"
+        ],
+        "tumor": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC11-tumor-lane14.bai"
+        ]
+    },
+    "BCC12": {
+        "control": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC12-control-lane15.bai"
+        ],
+        "tumor": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC12-tumor-lane16.bai"
+        ]
+    },
+    "BCC13": {
+        "control": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC13-control-lane17.bai"
+        ],
+        "tumor": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC13-tumor-lane18.bai"
+        ]
+    },
+    "BCC14": {
+        "control": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC14-control-lane19.bai"
+        ],
+        "tumor": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC14-tumor-lane20.bai"
+        ]
+    },
+    "BCC9": {
+        "control": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC9-control-lane9.bai"
+        ],
+        "tumor": [
+            "/data/exx/DNAseq/test/TEST2/recal/BCC9-tumor-lane10.bai"
+        ]
+    }
+}

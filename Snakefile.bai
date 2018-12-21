@@ -1,0 +1,83 @@
+shell.prefix("set -eo pipefail; echo BEGIN at $(date); ")
+shell.suffix("; exitstat=$?; echo END at $(date); echo exit status was $exitstat; exit $exitstat")
+
+configfile: "config.bai.yaml"
+
+localrules: all
+# localrules will let the rule run locally rather than submitting to cluster
+# computing nodes, this is for very small jobs
+
+# load cluster config file
+CLUSTER = json.load(open(config['CLUSTER_JSON']))
+FILES = json.load(open(config['SAMPLES_JSON']))
+
+import csv
+import os
+
+SAMPLES = sorted(FILES.keys())
+print (SAMPLES)
+
+## list all samples by sample_name and sample_type
+MARK_SAMPLES = []
+for sample in SAMPLES:
+    for sample_type in FILES[sample].keys():
+        MARK_SAMPLES.append(sample + "-" + sample_type)
+print ("MARK_SAMPLES")
+print (MARK_SAMPLES)
+
+# which sample_type is used as control for calling peaks: e.g. Input, IgG...
+CONTROL = config["control"]
+CONTROLS = [sample for sample in MARK_SAMPLES if CONTROL in sample]
+CASES = [sample for sample in MARK_SAMPLES if CONTROL not in sample]
+print (CONTROL)
+print (CONTROLS)
+print (CASES)
+
+## multiple samples may use the same control input/IgG files
+CONTROLS_UNIQUE = list(set(CONTROLS))
+print (CONTROLS_UNIQUE)
+
+## list BAM files
+CONTROL_BAM = expand("01.bam/{sample}.bai", sample=CONTROLS_UNIQUE)
+CASE_BAM = expand("01.bam/{sample}.bai", sample=CASES)
+
+print ("CONTROL_BAM")
+print (CONTROL_BAM)
+print ("CASE_BAM")
+print (CASE_BAM)
+
+ALL_SAMPLES = CASES + CONTROLS_UNIQUE
+print (ALL_SAMPLES)
+
+
+
+ALL_BAI = []
+ALL_BAI = expand("01.bam/{sample}.bai", sample = ALL_SAMPLES)
+
+TARGETS = []
+TARGETS.extend(ALL_BAI)
+
+
+
+localrules: all
+rule all:
+    input: TARGETS
+
+
+## get a list of fastq.gz files for the same mark, same sample
+def get_bai(wildcards):
+    sample = "-".join(wildcards.sample.split("-")[0:-1])
+    mark = wildcards.sample.split("-")[-1]
+    return FILES[sample][mark]
+
+## link,
+rule cp_bai:
+    input: get_bai
+    output: "01.bam/{sample}.bai"
+    log: "00.log/{sample}_cp"
+    shell: 
+       """
+       ln -s {input} {output}
+       """
+
+

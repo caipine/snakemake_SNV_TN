@@ -1,0 +1,15 @@
+sample_name fastq_name  factor 
+BCC1 BCC1-control-lane1 control
+BCC1 BCC1-tumor-lane2 tumor
+BCC9 BCC9-control-lane9	control
+BCC9 BCC9-tumor-lane10 tumor
+BCC10 BCC10-control-lane11 control
+BCC10 BCC10-tumor-lane12 tumor
+BCC11 BCC11-control-lane13 control
+BCC11 BCC11-tumor-lane14 tumor	
+BCC12 BCC12-control-lane15 control
+BCC12 BCC12-tumor-lane16 tumor	
+BCC13 BCC13-control-lane17 control
+BCC13 BCC13-tumor-lane18 tumor	
+BCC14 BCC14-control-lane19 control
+BCC14 BCC14-tumor-lane20 tumor	

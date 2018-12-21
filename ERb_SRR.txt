@@ -1,0 +1,24 @@
+sample_name fastq_name  factor 
+MDA-MB-231-ERb_Dox_3_hrs_ethanol SRR6456051  ERb
+MDA-MB-231-ERb_Dox_3_hrs_ethanol  SRR6456052  ERb
+MDA-MB-231-ERb_Dox_3_hrs_ethanol  SRR6456053  ERb
+MDA-MB-231-ERb_Dox_3_hrs_1nM_Estradiol  SRR6456063  ERb
+MDA-MB-231-ERb_Dox_3_hrs_1nM_Estradiol  SRR6456064  ERb
+MDA-MB-231-ERb_Dox_3_hrs_1nM_Estradiol  SRR6456065  ERb
+MDA-MB-231-ERb_Dox_3_hrs_1nM_LY500307  SRR6456075  ERb
+MDA-MB-231-ERb_Dox_3_hrs_1nM_LY500307  SRR6456076  ERb
+MDA-MB-231-ERb_Dox_3_hrs_1nM_LY500307  SRR6456077  ERb
+MDA-MB-231-ERb_Dox_3_hrs_ethanol  SRR6456087 Input
+MDA-MB-231-ERb_Dox_3_hrs_ethanol  SRR6456088 Input
+MDA-MB-231-ERb_Dox_3_hrs_ethanol  SRR6456089 Input
+MDA-MB-231-ERb_Dox_3_hrs_1nM_Estradiol  SRR6456096 Input
+MDA-MB-231-ERb_Dox_3_hrs_1nM_Estradiol  SRR6456097 Input
+MDA-MB-231-ERb_Dox_3_hrs_1nM_Estradiol  SRR6456098 Input
+MDA-MB-231-ERb_Dox_3_hrs_1nM_LY500307   SRR6456105 Input
+MDA-MB-231-ERb_Dox_3_hrs_1nM_LY500307   SRR6456106 Input
+MDA-MB-231-ERb_Dox_3_hrs_1nM_LY500307   SRR6456107 Input
+MOLM-14_DMSO2_6 SRR2518126  Input
+
+
+
+
